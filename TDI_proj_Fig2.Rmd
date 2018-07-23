@@ -1,0 +1,15 @@
+---
+title: "TDI Project Proposal, Figure 2"
+output: html_notebook
+---
+
+## Figure 2: Clustered Voting Patterns on Education, Safety, and Taxes in CA Counties, 1996-2017
+
+```{r}
+load("TDI_proj.RData")
+multiplot(per_p, psr_p, pec_p, psc_p, cols=2)
+```
+
+These plots display the results of k-means clustering the same data shown in Figure 1, but not grouped by period. This was done because there were not enough data points to create meaningful clusters within periods. To review: these plots illustrate the relationship between voter support for education and safety measures on the one hand, and tax increases and decreases on the other. The "education" category largely consists of ballot questions about whether to increase government spending on public schools. Similarly, the "safety" category largely consists of ballot questions about whether to increase government spending on jails and courts, and police, fire, and emergency services. Tax "increase" refers to increase, creation, and continuation of existing taxes, whereas tax "decrease" refers to reduction, limitation, or repeal of existing taxes. Each data point represents the average percentage of voters who voted yes for a given measure out of all voters who voted for that measure in a California county. Counties may appear in each plot up to two times, once from 1996 to 2006, and again from 2007-2017.  
+
+These preliminary results higlight the differences in voting behavior supporting tax increases and tax decreases. Voter support for tax decreases is more diffuse than for tax increases. However, no matter where their support falls for tax decreases, voters show a relatively consistent degree of support for both education and safety measures. In other words, voter support for social welfare issues is relatively independent of support for tax decreases. Accordingly, the clusters reflect levels of support for tax decreases more than they do levels of support for education or safety. By contrast, although the range of support for tax increases is smaller than that for tax decreases, there is more variation in support for education and safety measures within that smaller range. Consequently, clusters reflect variation along both axes. These results suggest that voter support for tax increases may be more useful than voter support for tax decreases in teasing out voter ideology regarding social welfare issues. However, both more dimensions of voter behavior and more data are needed to support these results.    

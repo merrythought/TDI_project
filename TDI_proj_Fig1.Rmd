@@ -1,0 +1,15 @@
+---
+title: "TDI Project Proposal, Figure 1"
+output: html_notebook
+---
+
+## Figure 1: Voting Patterns on Education, Safety, and Taxes in CA Counties, 1996-2017
+
+```{r}
+load("TDI_proj.RData")
+multiplot(edr, safer, edc, safec, cols=2)
+```
+
+These plots illustrate the relationship between voter support for education and safety measures on the one hand, and tax increases and decreases on the other. The "education" category largely consists of ballot questions about whether to increase government spending on public schools. Similarly, the "safety" category largely consists of ballot questions about whether to increase government spending on jails and courts, and police, fire, and emergency services. Tax "increase" refers to increase, creation, and continuation of existing taxes, whereas tax "decrease" refers to reduction, limitation, or repeal of existing taxes. Each data point represents the average percentage of voters who voted yes for a given measure out of all voters who voted for that measure in a California county. Counties may appear in each plot up to two times, once in each period. 
+
+These preliminary results indicate a more consistently positive relationship between support for education and safety and support for tax increases, as we would expect given the basics of Democratic party ideology, although the relationship between education and tax increases weakens in the more recent period. The tax decrease plot results are more mixed. The relationship between education and tax decrease increases slightly over time, whereas the relationship between safety and tax decrease decreases. On the basis of a basic Republican ideology, we might instead expect stronger support of tax decreases than is shown here. However, there are few data points for tax decrease measures relative to tax increase measures, and accordingly these preliminary associations may change with the addition of more data. 
